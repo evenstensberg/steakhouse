@@ -249,6 +249,7 @@
     color: gray;
     font-size: 0.9em;
     font-style: italic;
+    margin-left: 2em;
 
     position: relative;
     right: 1.5em;
@@ -345,8 +346,9 @@
   }
   .add-container {
     display: flex;
-    margin-left: 0em;
+    margin-left: 1em;
     margin-right: 1em;
+    margin-top: 1em;
   }
   .add-title {
     margin-left: 1em;
