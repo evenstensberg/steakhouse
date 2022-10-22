@@ -1,17 +1,17 @@
-"use strict";
-
 const express = require("express");
+const http = require("http");
+const path = require("path");
+
 const app = express();
 
-// Use the built-in express middleware for serving static files from './public'
-app.use(express.static("dist/steakhouse"));
+const port = process.env.PORT || 8080;
 
-app.get("*", (req, res) => {
-  res.sendFile(__dirname + "/dist/steakhouse/index.html");
-});
-// Start the server
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-  console.log("Press Ctrl+C to quit.");
-});
+app.use(express.static(__dirname + "/dist/steakhouse"));
+
+app.get("/*", (req, res) => res.sendFile(path.join(__dirname)));
+
+const server = http.createServer(app);
+
+server.listen(port, () =>
+  console.log(`App running on: http://localhost:${port}`)
+);
