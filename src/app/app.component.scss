@@ -249,10 +249,19 @@
     color: gray;
     font-size: 0.9em;
     font-style: italic;
+
     position: relative;
     right: 1.5em;
   }
-
+  .sub-menu-title {
+  }
+  .sub-title {
+    display: block;
+    margin-right: 1em;
+  }
+  .mobile-sub-header {
+    display: flex;
+  }
   .allergies-list {
     display: flex;
     align-items: center;
@@ -345,6 +354,10 @@
   .sub-menu-title {
     font-size: 1em;
   }
+}
+
+.mobile-sub-header {
+  display: flex;
 }
 
 .scroll-container {
