@@ -1,0 +1,12 @@
+.slider {
+  position: absolute;
+  top: 0;
+}
+
+ngb-carousel {
+  width: 100vw;
+  height: 100vh;
+  & img {
+    object-fit: cover;
+  }
+}

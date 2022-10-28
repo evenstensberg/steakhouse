@@ -20,6 +20,7 @@ export class AppComponent {
     });
   }
   title = 'steakhouse';
+  images = [];
   allergies = [
     { name: 'Gluten' },
     { name: 'Skalldyr' },
