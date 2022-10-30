@@ -1,6 +1,7 @@
 "use strict";
 
 const express = require("express");
+const path = require("path");
 const app = express();
 
 // Use the built-in express middleware for serving static files from './public'
