@@ -1,15 +1,13 @@
 "use strict";
 
 const express = require("express");
-const path = require("path");
 const app = express();
+const _app_folder = "dist/steakhouse";
 
-// Use the built-in express middleware for serving static files from './public'
-app.use("/", express.static("dist/steakhouse"));
+app.use("/", express.static(_app_folder, { maxAge: "1y" }));
 
 app.get("*", (req, res, next) => {
-  const indexFile = path.resolve(__dirname + "/dist/steakhouse/index.html");
-  res.sendFile(indexFile);
+  res.status(200).sendFile(`/`, { root: _app_folder });
 });
 // Start the server
 const PORT = process.env.PORT || 8080;
