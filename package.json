@@ -4,7 +4,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "ng serve",
-    "build": "ng build --prod --base-href dist",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy:public": "gcloud app deploy"

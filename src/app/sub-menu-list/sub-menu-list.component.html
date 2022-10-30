@@ -1,7 +1,7 @@
 <div class="add-container" *ngFor="let menuItem of arr; index as i">
   <p>{{ i + 1 }}. {{ menuItem.title }} &nbsp;</p>
   <p *ngIf="menuItem.allergies && menuItem.allergies.length">
-    (Allergener - {{ menuItem.allergies }})&nbsp;
+    ({{ menuItem.allergies }})&nbsp;
   </p>
   <span
     *ngIf="menuItem.popular"

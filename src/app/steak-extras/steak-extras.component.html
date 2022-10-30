@@ -5,7 +5,7 @@
       <span>Saus valg (inkludert)</span>
     </div>
     <div class="add-container" *ngFor="let sauce of sauces; index as i">
-      <p>{{ i + 1 }}. {{ sauce.title }} (Allergener - {{ sauce.allergies }})</p>
+      <p>{{ i + 1 }}. {{ sauce.title }} ({{ sauce.allergies }})</p>
     </div>
   </div>
   <div class="potato-container">
@@ -16,9 +16,7 @@
       </div>
       <!-- End tilbehør -->
       <div class="add-container" *ngFor="let sauce of sides; index as i">
-        <p>
-          {{ i + 1 }}. {{ sauce.title }} (Allergener - {{ sauce.allergies }})
-        </p>
+        <p>{{ i + 1 }}. {{ sauce.title }} ({{ sauce.allergies }})</p>
       </div>
     </div>
   </div>
