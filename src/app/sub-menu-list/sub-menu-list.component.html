@@ -1,0 +1,15 @@
+<div class="add-container" *ngFor="let menuItem of arr; index as i">
+  <p>{{ i + 1 }}. {{ menuItem.title }} &nbsp;</p>
+  <p *ngIf="menuItem.allergies && menuItem.allergies.length">
+    (Allergener - {{ menuItem.allergies }})&nbsp;
+  </p>
+  <span
+    *ngIf="menuItem.popular"
+    [ngStyle]="{ 'margin-left': '1em' }"
+    class="badge bg-primary"
+    >Populær</span
+  >
+  <span class="add-item-price"
+    >kr.<b> {{ menuItem.price }},-</b></span
+  >
+</div>

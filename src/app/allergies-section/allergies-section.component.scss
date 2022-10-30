@@ -1,0 +1,30 @@
+.allergies-container {
+  text-align: center;
+}
+
+.allergies-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  gap: 1em;
+  & p {
+    font-size: 0.8em;
+    font-style: italic;
+  }
+}
+/* Phones :) */
+@media screen and (max-width: 990px) {
+  .allergies-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    gap: 1em;
+    & p {
+      font-size: 0.8em;
+      font-style: italic;
+    }
+    flex-wrap: wrap;
+  }
+}

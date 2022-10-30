@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+
+.social-link {
+  color: black;
+}
+
+.navbar-container {
+  background: white;
+
+  border-bottom: solid 1px black;
+  margin-bottom: 20px;
+  z-index: 3;
+}
+
+.nav-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.phone-container {
+  color: black;
+  display: flex;
+  padding-left: 1em;
+  & span {
+    font-size: 1em;
+    padding-left: 2em;
+  }
+  & i {
+    margin-top: 0.3rem;
+  }
+}
+
+.social-wrapper {
+  margin-left: auto;
+  display: flex;
+  height: auto;
+  width: auto;
+  & a {
+    width: 2rem;
+  }
+  margin-left: auto;
+}

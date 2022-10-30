@@ -1,0 +1,8 @@
+<div class="allergies-container">
+  <h6>Allergener</h6>
+  <div class="allergies-list">
+    <p *ngFor="let allegie of allergies; index as i">
+      {{ i + 1 }}. {{ allegie.name }}
+    </p>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItem, BeefSide } from '../environments/types';
 
 @Component({
   selector: 'app-root',
@@ -6,38 +7,138 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  navigateToSection(name: string) {
-    document?.getElementById(name)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  }
-  scrollToTop() {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
-  }
   title = 'steakhouse';
   images = [];
-  allergies = [
-    { name: 'Gluten' },
-    { name: 'Skalldyr' },
-    { name: 'Egg' },
-    { name: 'Fisk' },
-    { name: 'Peanøtt' },
-    { name: 'Soya' },
-    { name: 'Melk' },
-    { name: 'Nøtter' },
-    { name: 'Selleri' },
-    { name: 'Sennep' },
-    { name: 'Sesam' },
-    { name: 'Sulfitt' },
-    { name: 'Lupin' },
-    { name: 'Bløtdyr' },
+  steakSauce: Array<BeefSide> = [
+    {
+      title: 'Husets peppersaus',
+      allergies: '7, 9',
+    },
+    {
+      title: 'Varm bernaisesaus',
+      allergies: '3, 6, 9',
+    },
+    {
+      title: 'Kald bernaisesaus',
+      allergies: '3, 6, 9',
+    },
+    {
+      title: 'Rødvinsaus',
+      allergies: '9',
+    },
+    {
+      title: 'Soppsaus',
+      allergies: '7',
+    },
   ];
-  starters = [
+  steakSides: Array<BeefSide> = [
+    {
+      title: 'Pommes Bistro',
+      allergies: 'Ingen',
+    },
+    {
+      title: 'Friterte båtpoteter',
+      allergies: 'Ingen',
+    },
+    {
+      title: 'Fløtegratinerte poteter',
+      allergies: '7, 9',
+    },
+    {
+      title: 'Saltbakte amandinepoteter med aioli poteter',
+      allergies: '3',
+    },
+    {
+      title: 'Bakt potet med ost og kryddersmør',
+      allergies: '7, 9',
+    },
+  ];
+  pizzaExtras: Array<MenuItem> = [
+    {
+      title: 'Rømmedressing',
+      price: '15',
+      allergies: '3, 7, 9',
+    },
+    {
+      title: 'Hvitløksdressing',
+      price: '15',
+      allergies: '3, 7, 9',
+    },
+    {
+      title: 'Bernaisesaus',
+      price: '15',
+      allergies: '3, 7',
+    },
+    {
+      title: 'En ekstra ingrediens',
+      price: '15',
+    },
+  ];
+  burgerSideOrders: Array<MenuItem> = [
+    {
+      title: 'Ektra poteter',
+      price: '40',
+    },
+    {
+      title: 'Friterte løkringer',
+      price: '25',
+      allergies: '1, 3',
+    },
+    {
+      title: 'Grillede Champignons',
+      price: '25',
+    },
+    {
+      title: 'Grillet bacon',
+      price: '25',
+    },
+    {
+      title: 'Smørdampet mais',
+      price: '20',
+    },
+    {
+      title: 'Mozarellasticks',
+      price: '25',
+      allergies: '1, 3, 7',
+    },
+    {
+      title: 'Ektra saus',
+      price: '20',
+    },
+    {
+      title: 'Kryddersmør',
+      price: '20',
+      allergies: '7, 9',
+    },
+    {
+      title: 'Jalapeno cheese poppers',
+      price: '25',
+      allergies: '1, 7',
+    },
+    {
+      title: 'Coleslaw',
+      price: '30',
+      allergies: '3, 7',
+    },
+  ];
+  potatos: Array<MenuItem> = [
+    {
+      title: 'm/ost, skinke, mais, dressing, kryddersmør',
+      allergies: '1, 2, 3, 10',
+      price: '115',
+    },
+    {
+      title: 'm/ost, pepperoni, mais, dressing, kryddersmør',
+      allergies: '1, 2, 3, 10',
+      price: '115',
+    },
+    {
+      title: 'm/ost, spicy biff, mais, dressing, kryddersmør',
+      allergies: '1, 2, 3, 10',
+      price: '115',
+    },
+  ];
+  starters: Array<MenuItem> = [
     {
       title: 'Innbakte kjempereker tempura',
       subtitle: 'Serveres med frisk salat, aioli og sweet chili',
@@ -79,12 +180,12 @@ export class AppComponent {
       price: '160',
     },
   ];
-  steaks = [
-    { name: 'Indrefilet 150 gram', price: '220' },
-    { name: 'Indrefilet 200 gram', price: '265' },
-    { name: 'Indrefilet 250 gram', price: '325' },
+  steaks: Array<MenuItem> = [
+    { title: 'Indrefilet 150 gram', price: '220' },
+    { title: 'Indrefilet 200 gram', price: '265' },
+    { title: 'Indrefilet 250 gram', price: '325' },
   ];
-  kokkensSpesial = [
+  kokkensSpesial: Array<MenuItem> = [
     {
       title: 'Pepper-Jack',
       subtitle:
@@ -115,7 +216,7 @@ export class AppComponent {
       price: '285',
     },
   ];
-  otherGrillDishes = [
+  otherGrillDishes: Array<MenuItem> = [
     {
       title: 'Spicy chicken',
       subtitle:
@@ -166,7 +267,7 @@ export class AppComponent {
       price: '180',
     },
   ];
-  salads = [
+  salads: Array<MenuItem> = [
     {
       title: 'Husets Cæsarsalat',
       subtitle:
@@ -190,7 +291,7 @@ export class AppComponent {
       price: '150',
     },
   ];
-  pastas = [
+  pastas: Array<MenuItem> = [
     {
       title: 'Spaghetti vegetar',
       subtitle: 'Med friske grønnsaker, pesto og fløtesaus',
@@ -217,7 +318,7 @@ export class AppComponent {
       price: '165',
     },
   ];
-  fishes = [
+  fishes: Array<MenuItem> = [
     {
       title: 'Laks brochette',
       subtitle:
@@ -240,7 +341,7 @@ export class AppComponent {
       price: '200',
     },
   ];
-  pizzas = [
+  pizzas: Array<MenuItem> = [
     {
       title: 'Margerita',
       subtitle: 'Ost',
@@ -341,7 +442,7 @@ export class AppComponent {
       price: '200',
     },
   ];
-  children = [
+  children: Array<MenuItem> = [
     {
       title: 'Hamburger og pommes bistro',
       subtitle: '100gr hamburger med pommes bistro',
@@ -355,7 +456,7 @@ export class AppComponent {
       price: '90',
     },
   ];
-  desserts = [
+  desserts: Array<MenuItem> = [
     {
       title: 'Creme brulee',
       subtitle: 'Klasisk karameldessert',
@@ -394,19 +495,19 @@ export class AppComponent {
       price: '80',
     },
   ];
-  drinks = [
-    { name: 'Coca Cola', price: '35' },
-    { name: 'Coca Cola Zero', price: '35' },
-    { name: 'Pepsi', price: '35' },
-    { name: 'Pepsi Max', price: '35' },
-    { name: '7 UP', price: '35' },
-    { name: 'Solo', price: '35' },
-    { name: 'Eplemost', price: '35' },
-    { name: 'Appelsinjuice', price: '35' },
-    { name: 'Farris', price: '35' },
-    { name: 'Farris Lime', price: '35' },
-    { name: 'Farris Bris', price: '35' },
-    { name: 'Jarritos', price: '43' },
-    { name: 'Alkoholholdig drikke (Spør betjeningen)', price: '35' },
+  drinks: Array<MenuItem> = [
+    { title: 'Coca Cola', price: '35' },
+    { title: 'Coca Cola Zero', price: '35' },
+    { title: 'Pepsi', price: '35' },
+    { title: 'Pepsi Max', price: '35' },
+    { title: '7 UP', price: '35' },
+    { title: 'Solo', price: '35' },
+    { title: 'Eplemost', price: '35' },
+    { title: 'Appelsinjuice', price: '35' },
+    { title: 'Farris', price: '35' },
+    { title: 'Farris Lime', price: '35' },
+    { title: 'Farris Bris', price: '35' },
+    { title: 'Jarritos', price: '43', popular: true },
+    { title: 'Alkoholholdig drikke (Spør betjeningen)', price: '35' },
   ];
 }

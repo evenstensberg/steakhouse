@@ -1,728 +1,197 @@
 <div>
-  <!-- upper navbar -->
   <div class="main">
-    <nav class="navbar navbar-expand-sm navbar-light navbar-container">
-      <div class="nav-wrapper">
-        <div class="phone-container">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-          <span>Telefon: (+47) 62 95 00 62</span>
-        </div>
-      </div>
-      <div class="social-wrapper">
-        <a
-          class="social-link"
-          rel="noopener"
-          target="_blank"
-          href="https://www.facebook.com/Folketssteakhouse"
-        >
-          <i class="fa fa-facebook-square" aria-hidden="true"></i>
-        </a>
-        <a
-          class="social-link"
-          rel="noopener"
-          target="_blank"
-          href="https://www.instagram.com/folketssteakhouse/"
-        >
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-      </div>
-    </nav>
+    <app-navbar></app-navbar>
     <app-carosel></app-carosel>
   </div>
-  <!-- Bottom menu -->
-  <div class="down-navbar">
-    <div class="logo-container">
-      <img src="/assets/folkets-steakhouse.svg" />
-    </div>
-  </div>
-  <!-- Begin main -->
+  <!-- Logo aligned left or centre of caorsel -->
+  <!-- Menu and description -->
   <main class="main-page-container">
     <div class="text-container">
-      <h2 class="text-center">Vår resturant</h2>
+      <app-logo-navbar></app-logo-navbar>
     </div>
-    <!-- #paragraphs -->
-    <div class="paragraph-containers">
-      <!-- #1 -->
-      <div class="paragraph">
-        <img src="/assets/plate.png" />
-        <p>
-          Folkets steakhouse, er en resturant på Flisa. Vi leverer mat som
-          smaker godt og er av høy kvalitet. Råvarene kommer fra Gilberg Engros
-          Menyparter, hvor vår mat alltid er fersk, og kjøttet mørt.
-        </p>
-      </div>
-      <!-- #2 -->
-      <div class="paragraph">
-        <img src="/assets/fast-delivery.png" />
-        <p>
-          Vi tilbyr take-away eller selskap. Om det er koseligere å spise
-          hjemme, holde selskap hos oss, eller andre sammenkomster, lager vi mat
-          til enhver anledning.
-        </p>
-        <div class="email-container">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          <span>Epost: post@folketssteakhouse.no</span>
-        </div>
-      </div>
-    </div>
-    <!-- Meny -->
-    <div class="menu-container">
-      <h2 class="menu-title">Meny</h2>
-      <div class="category-container">
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('smaaretter')"
-          >Småretter</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('burgere')"
-          >Hjemmelagde burgere</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('biff')"
-          >Biff</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('spesialbiff')"
-          >Kokkens Spesial</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('grillretter')"
-          >Andre grillretter</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('salater')"
-          >Salater</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('pasta')"
-          >Pasta</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('pizza')"
-          >Pizza</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('fisk')"
-          >Fisk</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('barn')"
-          >Barnemeny</span
-        >
-        <span
-          class="badge rounded-pill bg-primary text-light"
-          (click)="navigateToSection('drikke')"
-          >Drikke</span
-        >
-      </div>
-    </div>
+    <!-- Description of resturant and meals -->
+    <app-information-section></app-information-section>
+    <!-- Meny shortcuts -->
+    <app-menu-shortcuts></app-menu-shortcuts>
+
     <div class="main-menu">
-      <div class="allergies-container">
-        <h6>Allergener</h6>
-        <div class="allergies-list">
-          <p *ngFor="let allegie of allergies; index as i">
-            {{ i + 1 }}. {{ allegie.name }}
-          </p>
-        </div>
-      </div>
-      <!-- Subtitle -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/starters.png" />
-          <h4 class="sub-menu-title" id="smaaretter">Småretter/Forretter</h4>
-        </div>
-      </div>
-      <!-- Menu item starters-->
-      <div
-        class="single-menu-item"
-        *ngFor="let menuItem of starters; index as i"
-      >
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
-      <!-- Menu item  starters end -->
-      <!-- Subtitle -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/burger.png" />
-          <h4 class="sub-menu-title" id="burgere">Hjemmelagde burgere</h4>
-        </div>
-        <p class="title-description">
-          Saftige, hjemmelagde burgere, ca 200 gram. Alle varianeter serveres i
-          spesialbrød.
-        </p>
-      </div>
-      <!-- End subtitle -->
+      <!-- List of allergies -->
+      <app-allergies-section></app-allergies-section>
+      <!-- små/forretter -->
+      <app-menu-title
+        menuTitle="Småretter/Forretter"
+        imageUrl="/assets/starters.png"
+        idTag="smaaretter"
+      ></app-menu-title>
+      <!-- List of starters -->
+      <app-menu-item-with-description
+        [arr]="starters"
+      ></app-menu-item-with-description>
+      <!--  burgere -->
+      <app-menu-title
+        menuTitle="Hjemmelagde burgere"
+        imageUrl="/assets/burger.png"
+        description="Saftige, hjemmelagde burgere, ca 200 gram. Alle varianeter serveres i
+          spesialbrød."
+        idTag="burgere"
+      ></app-menu-title>
 
-      <!-- Menu items burger -->
-      <div
-        class="single-menu-item"
-        *ngFor="let menuItem of burgers; index as i"
-      >
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
+      <!-- List of burgers -->
+      <app-menu-item-with-description
+        [arr]="burgers"
+      ></app-menu-item-with-description>
 
-      <!-- Menu item burgers end -->
       <!-- Burger sides start -->
       <div class="add-title">
-        <div>
-          <img src="/assets/snack.png" />
-          <span class="add-sub-title">Burger side orders (tillegg)</span>
-        </div>
-        <!-- Each tilbehør -->
-        <div class="add-container">
-          <p class="add-description">1. Ekstra poteter</p>
-          <span class="add-item-price">kr.<b> 40,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">2. Ekstra bacon</p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            3. Friterte løkringer (Allergener - 1, 3)
-          </p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">4. Ektra ost (Allergener - 7)</p>
-          <span class="add-item-price">kr.<b> 20,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">5. Barbequesaus</p>
-          <span class="add-item-price">kr.<b> 15,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            6. Mozarellasticks 2 stk (Allergener - 1,3, 7)
-          </p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            7. Jalapeno cheese poppers 2 stk (Allergener - 1,3, 7)
-          </p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
+        <app-sub-menu-title
+          title="Tillegg til burger"
+          imageUrl="/assets/snack.png"
+        ></app-sub-menu-title>
+        <!-- Each side order for burger -->
+        <app-sub-menu-list [arr]="burgerSideOrders"></app-sub-menu-list>
       </div>
+      <!-- biff -->
+      <app-menu-title
+        menuTitle="Biff meny"
+        imageUrl="/assets/meat.png"
+        description="Prisene inkluderer valgfri potet, valgfri saus, salat eller
+          grønnsaker. Vil du ha større biff? Spør betjening"
+        idTag="biff"
+      ></app-menu-title>
+      <!-- List of biff -->
+      <app-menu-item-simple [arr]="steaks"></app-menu-item-simple>
+      <!-- Extras for biff -->
+      <app-steak-extras
+        [sauces]="steakSauce"
+        [sides]="steakSides"
+      ></app-steak-extras>
+      <!--  spesial biff -->
+      <app-menu-title
+        menuTitle="Kokkens spesialbiffer"
+        imageUrl="/assets/meat.png"
+        description="Lages av norsk indrefilet av okse, 200 gram."
+        idTag="spesialbiff"
+      ></app-menu-title>
 
-      <!-- Burger sides end -->
-      <!-- Subtitle -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/meat.png" />
-          <h4 class="sub-menu-title" id="biff">Biff meny</h4>
-        </div>
-        <p class="title-description">
-          Prisene inkluderer valgfri potet, valgfri saus, salat eller
-          grønnsaker. Vil du ha større biff? Spør betjening
-        </p>
-      </div>
-      <!-- Subtitle end -->
-      <!-- Menu items steak -->
-      <div class="single-menu-item" *ngFor="let steak of steaks; index as i">
-        <span class="menu-item-title">{{ i + 1 }}. {{ steak.name }} - </span>
-        <span class="menu-item-price"
-          >kr.<b>{{ steak.price }},-</b></span
-        >
-      </div>
-      <div class="potato-sauce-container">
-        <!-- Beef sides start -->
-        <div class="add-title">
-          <div>
-            <img src="/assets/sauce.png" />
-            <span class="add-sub-title">Saus valg (inkludert)</span>
-          </div>
-          <!-- End tilbehør -->
-          <div class="add-container">
-            <p class="add-description">
-              1. Husets peppersaus (Allergener - 7, 9)
-            </p>
-          </div>
-          <!-- End tilbehør -->
-          <div class="add-container">
-            <p class="add-description">
-              2. Varm bernaisesaus (Allergener - 3, 6, 9)
-            </p>
-          </div>
-          <!-- End tilbehør -->
-          <div class="add-container">
-            <p class="add-description">
-              3. Kald bernaisesaus (Allergener - 3, 6, 9)
-            </p>
-          </div>
-          <!-- End tilbehør -->
-          <div class="add-container">
-            <p class="add-description">4. Rødvinsaus (Allergener - 9)</p>
-          </div>
-          <!-- End tilbehør -->
-          <div class="add-container">
-            <p class="add-description">5. Soppsaus (Allergener - 7)</p>
-          </div>
-        </div>
-        <div class="potato-container">
-          <div class="add-title">
-            <div>
-              <img src="/assets/potato.png" />
-              <span class="add-sub-title">Potetvalg valg (inkludert)</span>
-            </div>
-            <!-- End tilbehør -->
-            <div class="add-container">
-              <p class="add-description">1.Pommes Bistro</p>
-            </div>
-            <!-- End tilbehør -->
-            <div class="add-container">
-              <p class="add-description">2.Friterte båtpoteter</p>
-            </div>
-            <!-- End tilbehør -->
-            <div class="add-container">
-              <p class="add-description">
-                3.Fløtegratinerte poteter (Allergener - 7, 9)
-              </p>
-            </div>
-            <!-- End tilbehør -->
-            <div class="add-container">
-              <p class="add-description">
-                4.Saltbakte amandinepoteter med aioli poteter (Allergener - 3)
-              </p>
-            </div>
-            <!-- End tilbehør -->
-            <div class="add-container">
-              <p class="add-description">
-                5.Bakt potet med ost og kryddersmør (Allergener - 7, 9)
-              </p>
-            </div>
-            <!-- End tilbehør -->
-          </div>
-        </div>
-      </div>
-      <!--  Menu item Steak end-->
-      <!-- EVEN -->
-      <!-- Burger sides end -->
-      <!-- Subtitle -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/meat.png" />
-
-          <h4 class="sub-menu-title" id="spesialbiff">Kokkens spesialbiffer</h4>
-        </div>
-        <p class="title-description">
-          Lages av norsk indrefilet av okse, 200 gram.
-        </p>
-      </div>
-      <!-- Subtitle end -->
-      <!-- Menu items steak -->
-      <!-- Menu items burger -->
-      <div
-        class="single-menu-item"
-        *ngFor="let menuItem of kokkensSpesial; index as i"
-      >
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span
-          *ngIf="menuItem.popular"
-          [ngStyle]="{ 'margin-left': '1em' }"
-          class="badge bg-primary"
-          >Populær</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
+      <!-- List of spesial -->
+      <app-menu-item-with-description
+        [arr]="kokkensSpesial"
+      ></app-menu-item-with-description>
       <!-- Burger sides start -->
       <div class="add-title">
-        <div>
-          <img src="/assets/snack.png" />
-          <span class="add-sub-title">Side orders (tillegg)</span>
-        </div>
-        <!-- Each tilbehør -->
-        <div class="add-container">
-          <p class="add-description">1. Ekstra poteter</p>
-          <span class="add-item-price">kr.<b> 40,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            2. Friterte løkringer (Allergener - 1, 3)
-          </p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">3. Grillede Champignons</p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">4. Grillet bacon</p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">5. Smørdampet mais</p>
-          <span class="add-item-price">kr.<b> 20,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            6. Mozarellasticks (Allergener - 1, 3, 7)
-          </p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">7. Ektra saus</p>
-          <span class="add-item-price">kr.<b> 20,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">8. Kryddersmør (Allergener - 7, 9)</p>
-          <span class="add-item-price">kr.<b> 20,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            9. Jalapeno cheese poppers (Allergener - 1, 7)
-          </p>
-          <span class="add-item-price">kr.<b> 25,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">10. Coleslaw (Allergener - 3, 7)</p>
-          <span class="add-item-price">kr.<b> 30,-</b></span>
-        </div>
-        <!-- End tilbehør -->
+        <app-sub-menu-title
+          title="Tillegg til biff"
+          imageUrl="/assets/snack.png"
+        ></app-sub-menu-title>
+        <!-- Each side order in general -->
+        <app-sub-menu-list [arr]="burgerSideOrders"></app-sub-menu-list>
       </div>
-      <!-- END Spesialretter -->
-      <!-- Subtitle -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/grill.png" />
-          <h4 class="sub-menu-title" id="grillretter">Andre grillretter</h4>
-        </div>
-      </div>
-      <!-- Menu item starters-->
-      <div
-        class="single-menu-item"
-        *ngFor="let menuItem of otherGrillDishes; index as i"
-      >
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span
-          *ngIf="menuItem.popular"
-          [ngStyle]="{ 'margin-left': '1em' }"
-          class="badge bg-primary"
-          >Populær</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
-      <!-- END MENU -->
-      <div class="add-title">
-        <div>
-          <img src="/assets/baked.png" />
-          <span class="add-sub-title">Bakt potet (Allergener - 3, 7, 9)</span>
-        </div>
-        <!-- Each tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            1. m/ost, skinke, mais, dressing, kryddersmør
-          </p>
-          <span class="add-item-price">kr.<b> 115,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            2. m/ost, pepperoni, mais, dressing, kryddersmør
-          </p>
-          <span class="add-item-price">kr.<b> 115,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            3. m/ost, spicy biff, mais, dressing, kryddersmør
-          </p>
-          <span class="add-item-price">kr.<b> 115,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-      </div>
-      <!-- Salater -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/salad.png" />
-          <h4 class="sub-menu-title" id="salater">Salater</h4>
-        </div>
+      <!-- Andre grillretter -->
+      <app-menu-title
+        menuTitle="Andre grillretter"
+        imageUrl="/assets/grill.png"
+        idTag="grillretter"
+      ></app-menu-title>
+      <!-- List of grillretter -->
+      <app-menu-item-with-description
+        [arr]="otherGrillDishes"
+      ></app-menu-item-with-description>
 
-        <p class="title-description">Serveres med brød og smør</p>
-      </div>
-      <!-- End subtitle -->
+      <!-- Bakt potet start -->
+      <app-menu-title
+        menuTitle="Bakt potet"
+        imageUrl="/assets/baked.png"
+        idTag="potet"
+      ></app-menu-title>
+      <!-- List of poteter -->
+      <app-menu-item-simple [arr]="potatos"></app-menu-item-simple>
 
-      <!-- Menu items burger -->
-      <div class="single-menu-item" *ngFor="let menuItem of salads; index as i">
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span
-          *ngIf="menuItem.popular"
-          [ngStyle]="{ 'margin-left': '1em' }"
-          class="badge bg-primary"
-          >Populær</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
-      <!-- End salater -->
-      <!-- start pasta -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/pasta.png" />
-          <h4 class="sub-menu-title" id="pasta">Pasta</h4>
-        </div>
-        <p class="title-description">Serveres med brød og smør</p>
-      </div>
-      <!-- End subtitle -->
+      <!-- salater -->
+      <app-menu-title
+        menuTitle="Salater"
+        imageUrl="/assets/salad.png"
+        description="Serveres med brød og smør"
+        idTag="salater"
+      ></app-menu-title>
 
-      <!-- Menu items pastas -->
-      <div class="single-menu-item" *ngFor="let menuItem of pastas; index as i">
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
-      <!-- End pastas -->
-      <!-- Subtitle -->
-      <!-- Start fish -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/fish.png" />
-          <h4 class="sub-menu-title" id="fisk">Fisk</h4>
-        </div>
-      </div>
-      <!-- Menu item starters-->
-      <div class="single-menu-item" *ngFor="let menuItem of fishes; index as i">
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
-      <!-- End fish -->
-      <!-- Subtitle -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/pizza.png" />
-          <h4 class="sub-menu-title" id="pizza">Pizza</h4>
-        </div>
-        <p class="title-description">
-          Vi serverer amerikansk pizza stekt i panne. (Allergener - 1, 7) Medium
-          = 30cm kr <b [ngStyle]="{ color: 'black' }">120</b>,- Stor = 40 cm kr
-          <b [ngStyle]="{ color: 'black' }">200</b>,-
-        </p>
-      </div>
-      <!-- Subtitle end -->
-      <!-- Menu items steak -->
-      <!-- Menu items burger -->
-      <div class="single-menu-item" *ngFor="let menuItem of pizzas; index as i">
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span
-          *ngIf="menuItem.popular"
-          [ngStyle]="{ 'margin-left': '1em' }"
-          class="badge bg-primary"
-          >Populær</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
+      <!-- List of salads -->
+      <app-menu-item-with-description
+        [arr]="salads"
+      ></app-menu-item-with-description>
+
+      <!-- pasta -->
+      <app-menu-title
+        menuTitle="Pasta"
+        imageUrl="/assets/pasta.png"
+        description="Serveres med brød og smør"
+        idTag="pasta"
+      ></app-menu-title>
+      <!-- List of pasta -->
+      <app-menu-item-with-description
+        [arr]="pastas"
+      ></app-menu-item-with-description>
+      <!-- fish -->
+      <app-menu-title
+        menuTitle="Fisk"
+        imageUrl="/assets/fish.png"
+        idTag="fisk"
+      ></app-menu-title>
+      <!-- List of fish -->
+      <app-menu-item-with-description
+        [arr]="fishes"
+      ></app-menu-item-with-description>
+      <!--  pizza -->
+      <app-menu-title
+        menuTitle="Pizza"
+        imageUrl="/assets/pizza.png"
+        description="Vi serverer amerikansk pizza stekt i panne. (Allergener - 1, 7) Medium = 30cm kr 135,- Stor = 40 cm kr 230,-"
+        idTag="pizza"
+      ></app-menu-title>
+
+      <!-- List of pizzas -->
+      <app-menu-item-with-description
+        [arr]="pizzas"
+      ></app-menu-item-with-description>
+
       <!-- Pizza sides -->
       <div class="add-title">
-        <div>
-          <img src="/assets/pizzaSauce.png" />
-          <span class="add-sub-title">Extras</span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">1. Rømmedressing (Allergener - 3, 7, 9)</p>
-          <span class="add-item-price">kr.<b> 15,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">
-            2. Hvitløksdressing (Allergener - 3, 7, 9)
-          </p>
-          <span class="add-item-price">kr.<b> 15,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">3. Bernaisesaus (Allergener - 3, 7)</p>
-          <span class="add-item-price">kr.<b> 15,-</b></span>
-        </div>
-        <!-- End tilbehør -->
-        <div class="add-container">
-          <p class="add-description">1. Extra ingrediens</p>
-          <span class="add-item-price">kr.<b> 15,-</b></span>
-        </div>
-        <!-- End tilbehør -->
+        <app-sub-menu-title
+          title="Extras"
+          imageUrl="/assets/pizzaSauce.png"
+        ></app-sub-menu-title>
+        <!-- Each extra item for pizza -->
+        <app-sub-menu-list [arr]="pizzaExtras"></app-sub-menu-list>
       </div>
-      <!-- Subtitle -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/children.png" />
-          <h4 class="sub-menu-title" id="barn">Barnemeny</h4>
-        </div>
-      </div>
-      <!-- End subtitle -->
-
-      <!-- Menu items children -->
-      <div
-        class="single-menu-item"
-        *ngFor="let menuItem of children; index as i"
-      >
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
-      <!--  End menu children-->
-      <!-- Subtitle -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/dessert.png" />
-          <h4 class="sub-menu-title">Dessert</h4>
-        </div>
-      </div>
-      <!-- End subtitle -->
-
-      <!-- Menu items children -->
-      <div
-        class="single-menu-item"
-        *ngFor="let menuItem of desserts; index as i"
-      >
-        <span class="menu-item-title"
-          >{{ i + 1 }}. {{ menuItem.title }} -
-        </span>
-        <span class="menu-item-allergies"
-          >(Allergener - {{ menuItem.allergies }})</span
-        >
-        <span class="menu-item-price"
-          >kr.<b>{{ menuItem.price }},-</b></span
-        >
-        <p class="menu-item-description">
-          {{ menuItem.subtitle }}
-        </p>
-      </div>
+      <!-- children -->
+      <app-menu-title
+        menuTitle="Barnemeny"
+        imageUrl="/assets/children.png"
+        idTag="barn"
+      ></app-menu-title>
+      <!-- List of children -->
+      <app-menu-item-with-description
+        [arr]="children"
+      ></app-menu-item-with-description>
+      <!-- Menu item title dessert -->
+      <app-menu-title
+        menuTitle="Dessert"
+        imageUrl="/assets/dessert.png"
+        idTag="dessert"
+      ></app-menu-title>
+      <!-- List of desserts -->
+      <app-menu-item-with-description
+        [arr]="desserts"
+      ></app-menu-item-with-description>
       <!-- Drinks start -->
-      <div class="sub-title">
-        <div class="mobile-sub-header">
-          <img src="/assets/softDrink.png" />
-          <h4 class="sub-menu-title" id="drikke">
-            Brus/mineralvann(0,33L flaske)
-          </h4>
-        </div>
-      </div>
-      <!-- Subtitle end -->
-      <!-- Menu items steak -->
-      <div class="single-menu-item" *ngFor="let drink of drinks; index as i">
-        <span class="menu-item-title">{{ i + 1 }}. {{ drink.name }} - </span>
-        <span class="menu-item-price"
-          >kr.<b>{{ drink.price }},-</b></span
-        >
-      </div>
+      <app-menu-title
+        menuTitle="Brus/mineralvann(0,33L flaske)"
+        imageUrl="/assets/softDrink.png"
+        idTag="drikke"
+      ></app-menu-title>
+      <!-- List of drinks -->
+      <app-menu-item-simple [arr]="drinks"></app-menu-item-simple>
     </div>
-    <div class="scroll-container">
-      <p (click)="scrollToTop()">Scroll til topp</p>
-    </div>
+    <app-scroll-up-section></app-scroll-up-section>
+    <app-promotion-section></app-promotion-section>
   </main>
-  <!-- End main -->
 </div>

@@ -1,0 +1,68 @@
+.paragraph-containers {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.paragraph {
+  width: calc(50% - 2em);
+  text-align: center;
+  line-height: 1.5em;
+  margin: 2em;
+  margin-top: 0;
+
+  & img {
+    height: 120px;
+  }
+}
+.email-container {
+  text-align: center;
+
+  & span {
+    font-size: 1rem;
+    padding-left: 1em;
+  }
+  & i {
+    margin-top: 0.2rem;
+  }
+}
+/* Phones :) */
+@media screen and (max-width: 990px) {
+  .email-container {
+    text-align: center;
+
+    display: flex;
+    & span {
+      font-size: 1rem;
+      padding-left: 1em;
+    }
+    & i {
+      margin-top: 0.2rem;
+    }
+  }
+  .paragraph-containers {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .paragraph {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5em;
+    margin: 2em;
+    margin-top: 0;
+
+    & img {
+      height: 120px;
+    }
+  }
+
+  .paragraph:nth-child(1) {
+    float: left;
+  }
+  .paragraph:nth-child(2) {
+    float: right;
+  }
+}

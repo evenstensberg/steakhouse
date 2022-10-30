@@ -8,5 +8,12 @@ ngb-carousel {
   height: 100vh;
   & img {
     object-fit: cover;
+    opacity: 0.85;
   }
+}
+
+.carousel-caption {
+  border-radius: 2em;
+  padding: 1em;
+  background: burlywood;
 }

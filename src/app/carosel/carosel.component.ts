@@ -13,14 +13,45 @@ interface SliderImages {
   styleUrls: ['./carosel.component.scss'],
 })
 export class CaroselComponent implements OnInit {
-  images = [944, 1011, 984].map((n) => {
-    return {
-      url: `https://picsum.photos/id/${n}/900/500.jpg`,
-      alt: 'For a11y',
-      caption: 'Plankebiff med poteter, mais og mye snadder!',
+  images: Array<SliderImages> = [
+    {
+      url: '/assets/burger.jpeg',
+      alt: 'Burger',
+      title: 'Bacon cheeseburger',
+      caption: 'Dressing, salat og mye kjøtt',
+    },
+    {
+      url: '/assets/plankebiff.jpeg',
+      alt: 'Plankebiff',
       title: 'Plankebiff',
-    };
-  });
+      caption: 'God biff, med potetmos og godt tilbehør',
+    },
+    {
+      url: '/assets/pizza.jpeg',
+      alt: 'Pizza',
+      title: 'Pepperoni Pizza',
+      caption: 'Pizza med pepperoni, mais og løk',
+    },
+    {
+      url: '/assets/jarritos.jpeg',
+      alt: 'Jarritos brus',
+      caption: 'Jarritos',
+      title: 'Frisk brus fra Mexico',
+    },
+    {
+      url: '/assets/dessert-1.jpeg',
+      alt: 'Dessert',
+      caption: '3 kuler vaniljeis, med krem og saus',
+      title: 'Iskrem',
+    },
+    {
+      url: '/assets/creme.jpeg',
+      alt: 'Dessert',
+      caption: 'Karamelisert fløte',
+      title: 'Creme Brulee',
+    },
+  ];
+
   constructor() {}
 
   ngOnInit(): void {}

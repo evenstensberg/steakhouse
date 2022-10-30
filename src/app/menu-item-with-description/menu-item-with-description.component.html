@@ -1,0 +1,18 @@
+<div class="single-menu-item" *ngFor="let menuItem of arr; index as i">
+  <span>{{ i + 1 }}. {{ menuItem.title }} - </span>
+  <span class="menu-item-allergies"
+    >(Allergener - {{ menuItem.allergies }})</span
+  >
+  <span
+    *ngIf="menuItem.popular"
+    [ngStyle]="{ 'margin-left': '1em' }"
+    class="badge bg-primary"
+    >Populær</span
+  >
+  <span class="menu-item-price"
+    >kr.<b>{{ menuItem.price }},-</b></span
+  >
+  <p class="menu-item-description">
+    {{ menuItem.subtitle }}
+  </p>
+</div>

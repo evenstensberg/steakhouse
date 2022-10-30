@@ -1,0 +1,19 @@
+.add-container {
+  display: flex;
+  margin-left: 6em;
+  margin-right: auto;
+}
+
+.add-item-price {
+  float: right;
+}
+/* Phones :) */
+@media screen and (max-width: 990px) {
+  .add-container {
+    display: flex;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    height: 5em;
+  }
+}

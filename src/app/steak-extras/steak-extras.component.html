@@ -1,0 +1,25 @@
+<div class="potato-sauce-container">
+  <div class="add-title">
+    <div>
+      <img src="/assets/sauce.png" />
+      <span>Saus valg (inkludert)</span>
+    </div>
+    <div class="add-container" *ngFor="let sauce of sauces; index as i">
+      <p>{{ i + 1 }}. {{ sauce.title }} (Allergener - {{ sauce.allergies }})</p>
+    </div>
+  </div>
+  <div class="potato-container">
+    <div class="add-title">
+      <div>
+        <img src="/assets/potato.png" />
+        <span>Potetvalg valg (inkludert)</span>
+      </div>
+      <!-- End tilbehør -->
+      <div class="add-container" *ngFor="let sauce of sides; index as i">
+        <p>
+          {{ i + 1 }}. {{ sauce.title }} (Allergener - {{ sauce.allergies }})
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

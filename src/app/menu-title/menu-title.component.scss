@@ -1,0 +1,54 @@
+.sub-title {
+  display: flex;
+  margin-left: 2em;
+  & img {
+    height: 60px;
+    width: auto;
+  }
+  & h4 {
+    position: relative;
+    top: 1em;
+  }
+}
+
+.mobile-sub-header {
+  display: flex;
+}
+
+.sub-menu-title {
+  width: 100%;
+  max-width: 6em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.title-description {
+  position: relative;
+  top: 3em;
+  color: gray;
+  font-size: 0.9em;
+  font-style: italic;
+}
+/* Phones :) */
+@media screen and (max-width: 990px) {
+  .sub-title {
+    display: block;
+    margin-right: 1em;
+  }
+  .mobile-sub-header {
+    display: flex;
+  }
+  .sub-menu-title {
+    font-size: 1em;
+    text-align: center;
+  }
+  .title-description {
+    color: gray;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-left: 2em;
+
+    position: relative;
+    right: 1.5em;
+    text-align: center;
+  }
+}

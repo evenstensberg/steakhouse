@@ -1,0 +1,33 @@
+.single-menu-item {
+  margin-top: 4em;
+  margin-left: 6em;
+  margin-right: 6em;
+  border-bottom: 1px solid gray;
+  margin-bottom: 4em;
+}
+
+.menu-item-allergies {
+  margin-left: 1em;
+}
+
+.menu-item-price {
+  float: right;
+}
+.menu-item-description {
+  font-size: 0.8em;
+  margin-top: 1em;
+  margin-left: 5em;
+}
+/* Phones :) */
+@media screen and (max-width: 990px) {
+  .single-menu-item {
+    margin-top: 4em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-bottom: 1px solid gray;
+    margin-bottom: 4em;
+  }
+  .menu-item-allergies {
+    font-size: 0.7em;
+  }
+}
