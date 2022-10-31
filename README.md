@@ -24,3 +24,12 @@ $ rm -rf dist && npm run build && npm run deploy: public
 
 Built by [Even Stensberg](https://twitter.com/evenstensberg) ♥️
 
+
+## TODO
+
+- Sroll is janky on iphone
+- cursor pointer on buttons
+- smaller logo
+- static "to top" button when you scroll
+- fix overflow-x issue
+- bigger menu list buttons
