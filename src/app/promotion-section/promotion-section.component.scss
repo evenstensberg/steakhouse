@@ -4,5 +4,18 @@ p {
 }
 
 .promotion-container {
-  height: 5em;
+  height: 10em;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+/* Phones :) */
+@media screen and (max-width: 990px) {
+  .promotion-container {
+    height: 15em;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 2em;
+  }
 }

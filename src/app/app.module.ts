@@ -18,9 +18,10 @@ import { SubMenuListComponent } from './sub-menu-list/sub-menu-list.component';
 import { SteakExtrasComponent } from './steak-extras/steak-extras.component';
 import { ScrollUpSectionComponent } from './scroll-up-section/scroll-up-section.component';
 import { PromotionSectionComponent } from './promotion-section/promotion-section.component';
+import { StickyScrollComponent } from './sticky-scroll/sticky-scroll.component';
 
 @NgModule({
-  declarations: [AppComponent, CaroselComponent, NavbarComponent, LogoNavbarComponent, InformationSectionComponent, MenuShortcutsComponent, AllergiesSectionComponent, MenuTitleComponent, MenuItemWithDescriptionComponent, MenuItemSimpleComponent, SubMenuTitleComponent, SubMenuListComponent, SteakExtrasComponent, ScrollUpSectionComponent, PromotionSectionComponent],
+  declarations: [AppComponent, CaroselComponent, NavbarComponent, LogoNavbarComponent, InformationSectionComponent, MenuShortcutsComponent, AllergiesSectionComponent, MenuTitleComponent, MenuItemWithDescriptionComponent, MenuItemSimpleComponent, SubMenuTitleComponent, SubMenuListComponent, SteakExtrasComponent, ScrollUpSectionComponent, PromotionSectionComponent, StickyScrollComponent],
   imports: [BrowserModule, NgbModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
