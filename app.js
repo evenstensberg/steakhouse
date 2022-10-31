@@ -4,9 +4,10 @@ const express = require("express");
 const app = express();
 const _app_folder = "dist/steakhouse";
 
-app.use("/", express.static(_app_folder, { maxAge: "1y" }));
+app.use("/", express.static(_app_folder, { maxAge: 60000 }));
 
 app.get("*", (req, res, next) => {
+  res.set("Cache-Control", "no-store");
   res.status(200).sendFile(`/`, { root: _app_folder });
 });
 // Start the server
