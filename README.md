@@ -27,4 +27,4 @@ Built by [Even Stensberg](https://twitter.com/evenstensberg) ♥️
 
 ## TODO
 
-- Sroll is janky on iphone
+- Scroll is janky on iphone
