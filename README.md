@@ -12,7 +12,7 @@ $ npm install && npm run dev
 ## Deploy
 
 ```console
-$ rm -rf dist && npm run build && npm run deploy: public
+$ rm -rf dist && npm run build && npm run deploy:public
 ```
 
 ## Notes
