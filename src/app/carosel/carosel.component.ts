@@ -17,7 +17,7 @@ export class CaroselComponent implements OnInit {
     {
       url: '/assets/burger.jpeg',
       alt: 'Burger',
-      title: 'Bacon cheeseburger',
+      title: 'Classic american burger',
       caption: 'Dressing, salat og mye kjøtt',
     },
     {
@@ -29,20 +29,20 @@ export class CaroselComponent implements OnInit {
     {
       url: '/assets/pizza.jpeg',
       alt: 'Pizza',
-      title: 'Pepperoni Pizza',
+      title: 'Pizza',
       caption: 'Pizza med pepperoni, mais og løk',
     },
     {
       url: '/assets/jarritos.jpeg',
       alt: 'Jarritos brus',
       caption: 'Jarritos',
-      title: 'Frisk brus fra Mexico',
+      title: 'Frisk brus',
     },
     {
       url: '/assets/dessert-1.jpeg',
       alt: 'Dessert',
       caption: '3 kuler vaniljeis, med krem og saus',
-      title: 'Iskrem',
+      title: 'Dessert',
     },
     {
       url: '/assets/creme.jpeg',
