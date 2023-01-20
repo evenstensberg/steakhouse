@@ -11,6 +11,15 @@ $ npm install && npm run dev
 
 ## Deploy
 
+### Selecting a project
+
+```console
+gcloud projects list
+```
+```console
+gcloud config set project `PROJECT ID`
+```
+
 ```console
 $ rm -rf dist && npm run build && npm run deploy:public
 ```
