@@ -571,6 +571,5 @@ export class AppComponent {
     { title: 'Farris', price: '45' },
     { title: 'Farris Lime', price: '45' },
     { title: 'Jarritos', price: '45', popular: true },
-    { title: 'Alkoholholdig drikke (Spør betjeningen)', price: '75' },
   ];
 }
