@@ -45,6 +45,10 @@ export class AppComponent {
       allergies: 'Ingen',
     },
     {
+      title: 'Ris',
+      allergies: 'Ingen'
+    },
+    {
       title: 'Fløtegratinerte poteter',
       allergies: '7, 9',
     },
@@ -60,22 +64,22 @@ export class AppComponent {
   pizzaExtras: Array<MenuItem> = [
     {
       title: 'Rømmedressing',
-      price: '15',
+      price: '20',
       allergies: '3, 7, 9',
     },
     {
       title: 'Hvitløksdressing',
-      price: '15',
+      price: '20',
       allergies: '3, 7, 9',
     },
     {
       title: 'Bernaisesaus',
-      price: '15',
+      price: '20',
       allergies: '3, 7',
     },
     {
       title: 'En ekstra ingrediens',
-      price: '15',
+      price: '20',
     },
   ];
   burgerSideOrders: Array<MenuItem> = [
@@ -139,17 +143,17 @@ export class AppComponent {
     {
       title: 'm/ost, skinke, mais, dressing, kryddersmør',
       allergies: '1, 2, 3, 10',
-      price: '145',
+      price: '155',
     },
     {
       title: 'm/ost, pepperoni, mais, dressing, kryddersmør',
       allergies: '1, 2, 3, 10',
-      price: '145',
+      price: '155',
     },
     {
       title: 'm/ost, spicy biff, mais, dressing, kryddersmør',
       allergies: '1, 2, 3, 10',
-      price: '145',
+      price: '155',
     },
   ];
   starters: Array<MenuItem> = [
@@ -157,20 +161,20 @@ export class AppComponent {
       title: 'Innbakte kjempereker tempura',
       subtitle: 'Serveres med frisk salat, dressing, aioli og sweet chili.',
       allergies: '1, 2, 3, 6, 10',
-      price: '125',
+      price: '135',
     },
     {
       title: 'Snack basket, fin å dele, nok til 2',
       subtitle:
         'Crispy tender chicken, løkringer, mozzarellasticks, jalapeno cheese poppers, nachochips, salsa og hvitløksdressing.',
       allergies: '1, 3, 7, 9, 10 + bygg',
-      price: '210',
+      price: '220',
     },
     {
       title: 'Nacho snack',
       subtitle: 'Varme nachochips gratinert med ost. Salsa og rømme.',
       allergies: '7',
-      price: '100',
+      price: '110',
     },
   ];
   burgers = [
@@ -178,14 +182,14 @@ export class AppComponent {
       title: 'Classic american burger',
       subtitle: 'Med dressing, frisk salat og pommes bistro.',
       allergies: '1, 3, 10',
-      price: '165',
+      price: '175',
     },
     {
       title: 'Cajuan burger',
       subtitle:
         'Cajunkrydret burger med dressing, frisk salat og pommes bistro.',
       allergies: '1, 3, 9, 10',
-      price: '165',
+      price: '175',
     },
     {
       title: 'Bacon cheeseburger',
@@ -202,10 +206,10 @@ export class AppComponent {
     },
   ];
   steaks: Array<MenuItem> = [
-    { title: 'Indrefilet 150 gram', price: '250' },
-    { title: 'Indrefilet 200 gram', price: '320' },
-    { title: 'Indrefilet 250 gram', price: '400' },
-    { title: 'Indrefilet 300 gram', price: '480' },
+    { title: 'Indrefilet 150 gram', price: '255' },
+    { title: 'Indrefilet 200 gram', price: '340' },
+    { title: 'Indrefilet 250 gram', price: '415' },
+    { title: 'Indrefilet 300 gram', price: '490' },
   ];
   kokkensSpesial: Array<MenuItem> = [
     {
@@ -213,21 +217,21 @@ export class AppComponent {
       subtitle:
         'Marinert i hjemmelaget peppermarinade av whiskey. Serveres med grønnsaker, friterte båtpoteter og peppersaus',
       allergies: '7, 9',
-      price: '345',
+      price: '360',
     },
     {
       title: 'Biff Jameson',
       subtitle:
         'Marinert i hjemmelaget peppermarinade av irsk whiskey. Serveres med grønnsaker, friterte båtpoteter og soppsaus',
       allergies: '7, 9',
-      price: '345',
+      price: '360',
     },
     {
       title: 'Folkets plankestek',
       subtitle:
         'Indrefilet av okse, serveres på eik-planke med grønnsaker, grillet tomat, gratinert potetmos og valgfri saus',
       allergies: '7, 9',
-      price: '345',
+      price: '360',
       popular: true,
     },
     {
@@ -235,14 +239,7 @@ export class AppComponent {
       subtitle:
         'Indrefilet av okse, serveres med salat, pommes bistro, nachochips, grillet jalapeno og mais og mexikansk saus',
       allergies: '7',
-      price: '345',
-    },
-    {
-      title: 'Fileto monza',
-      subtitle:
-        'Indrefilet av okse, serveres med smørdamet mais, grillet tomat, grønnsaker, friterte båtpoteter og gorgonzolasaus',
-      allergies: '7',
-      price: '345',
+      price: '360',
     },
   ];
   otherGrillDishes: Array<MenuItem> = [
@@ -251,50 +248,56 @@ export class AppComponent {
       subtitle:
         'Bbq-krydret kyllingfilet servert med rømme, frisk salat og valgfri potet.',
       allergies: '3, 7, 9, 10',
-      price: '240',
+      price: '250',
     },
     {
       title: 'Kylling crispy tender',
       subtitle:
         'Sprøfriterte prinsessefileter servert med bbq-dipp, frisk salat og valgfri potet.',
       allergies: '1, 3, 9, 10',
-      price: '240',
+      price: '250',
     },
     {
       title: 'Kyllingfilet cajun style',
       subtitle:
         'Grillet kyllingfilet og bacon, gratinert med ost. Serveres med frisk salat, jalapeno, barnaisesaus og valgfri potet.',
       allergies: '1, 3, 7, 9, 10',
-      price: '240',
+      price: '250',
     },
     {
       title: 'Kylling philadelphia',
       subtitle:
         'Kyllingfilet med frisk salat, stekt bacon Philadelphiasaus og valgfri potet.',
       allergies: '3, 7, 10',
-      price: '240',
+      price: '250',
     },
     {
       title: 'Kokkens spareribs',
       subtitle:
         'Marinerte, grillede backloinribs. Serveres med smørdampet mais, coleslaw, frisk salat og barbequesaus. Serveres med saltbakte Amandinepoteter',
       allergies: '3, 7, 9, 10',
-      price: '290',
+      price: '295',
       popular: true,
     },
     {
       title: 'Løvbiff',
       subtitle: 'Serveres med frisk salat, valgfri ssaus og valgfri potet',
       allergies: 'Ingen',
-      price: '245',
+      price: '255',
     },
     {
       title: 'Folkets biffsnadder',
       subtitle:
         'Strimlet indrefilet av okse med frisk salat. Stekte grønnsaker, bernaise eller pepersaus med valgfri potet.',
       allergies: '1, 3, 7, 10',
-      price: '245',
+      price: '255',
     },
+    {
+      title: 'Vegetarfajitas',
+      subtitle: 'Grillede grønnsaker, serveres med frisk salat, revet ost, tortillalefser, rømme, guacamole, salsa, nachochips og ris.',
+      allergies: '1, 3, 7, 10',
+      price: '255'
+    }
   ];
   salads: Array<MenuItem> = [
     {
@@ -302,7 +305,7 @@ export class AppComponent {
       subtitle:
         'Romanosalat, agurk, rødløk, orginal Cæsar dressing. Parmasan, krutonger. Toppet med bacon og kyllingfilet.',
       allergies: '1, 3, 4, 7, 10 + bygg',
-      price: '180',
+      price: '185',
       popular: true,
     },
     {
@@ -310,14 +313,14 @@ export class AppComponent {
       subtitle:
         'Frisk salat med biff, mais, agurk, tomat, løk, paprika og dressing',
       allergies: '3, 7, 9, 10',
-      price: '180',
+      price: '185',
     },
     {
       title: 'Ost & skinkesalat',
       subtitle:
         'Frisk salat med ost og skinke, mais, agurk, tomat, løk, paprika og dressing.',
       allergies: '1, 3, 7, 9, 10',
-      price: '180',
+      price: '185',
     },
   ];
   pastas: Array<MenuItem> = [
@@ -325,26 +328,26 @@ export class AppComponent {
       title: 'Spaghetti vegetar',
       subtitle: 'Med friske grønnsaker, pesto og fløtesaus',
       allergies: '1, 7, 8',
-      price: '195',
+      price: '200',
     },
     {
       title: 'Penne beef',
       subtitle:
         'Penne, indrefilet av okse, løk, paprika, gulrot, pesto og fløtesaus',
       allergies: '1, 7, 8',
-      price: '195',
+      price: '200',
     },
     {
       title: 'Spaghetti carbonara',
       subtitle: 'Spaghetti med bacon, fløte og eggeplomme',
       allergies: '1, 3, 7',
-      price: '195',
+      price: '200',
     },
     {
       title: 'Penne spicy chicken',
       subtitle: 'Penne, godt krydret fløtesaus, kyllingfilet og parmesan',
       allergies: '1, 3, 7, 9',
-      price: '195',
+      price: '200',
     },
   ];
   fishes: Array<MenuItem> = [
@@ -353,21 +356,21 @@ export class AppComponent {
       subtitle:
         '2 grillspyd med laks, krydret med lima & soya. Serveres med frisk salat og rømme sammen med valgfri potet.',
       allergies: '1, 4, 6, 7',
-      price: '220',
+      price: '225',
     },
     {
       title: 'Fish & chips',
       subtitle:
         'Servert på tradisjonelt vis med remulade, agurksalat og pommes frites bistro',
       allergies: '1, 3, 4, 10',
-      price: '220',
+      price: '225',
     },
     {
       title: 'Innbakte kjemereker temprua sweet & sour',
       subtitle:
         'Store sprøstekte scampi serveres med frisk salat, sweet chili dip, rømmedip og valgfri potet.',
       allergies: '1, 2, 3, 7, 10',
-      price: '220',
+      price: '225',
     },
   ];
   pizzas: Array<MenuItem> = [
@@ -476,25 +479,25 @@ export class AppComponent {
       title: 'Hamburger og pommes bistro',
       subtitle: '100gr hamburger med pommes bistro',
       allergies: '1',
-      price: '110',
+      price: '115',
     },
     {
       title: 'Pølse med pommes bistro',
       subtitle: 'Pølse med pommes bistro',
       allergies: '1',
-      price: '100',
+      price: '105',
     },
     {
       title: 'Fish & chips',
       subtitle: 'med remulade, agurksalat og pommes frites bistro',
       allergies: '1, 3, 4, 7, 10',
-      price: '130',
+      price: '135',
     },
     {
       title: 'Kylling',
       subtitle: 'med pommes bistro, salat, dressing og bearnaisesaus',
       allergies: '3, 6, 7, 10',
-      price: '130',
+      price: '140',
     },
     {
       title: 'Spareribs',
@@ -508,64 +511,64 @@ export class AppComponent {
       title: 'Creme brulee',
       subtitle: 'Klasisk karameldessert',
       allergies: '3, 7',
-      price: '115',
+      price: '120',
     },
     {
       title: 'Oreo cheesecake',
       subtitle: 'Hjemmelaget ostekake, serveres med vaniljeis og oreokjeks',
       allergies: '7',
-      price: '115',
+      price: '125',
     },
     {
       title: 'Panna cotta',
       subtitle:
         'Klassisk italiensk fløtedessert, serveres med frisk coulis og bær.',
       allergies: '3, 7',
-      price: '115',
+      price: '125',
     },
     {
       title: 'Marinerte bjørnebær',
       subtitle: 'Med sitrussorbet og eggelikør',
       allergies: '3, 7',
-      price: '115',
+      price: '120',
     },
     {
       title: 'Hjemmelaget peanutcake',
       subtitle: 'Med krem og sjokoladesaus',
       allergies: '1, 3, 5, 7',
-      price: '115',
+      price: '125',
     },
     {
       title: 'Iskrem',
       subtitle: '3 kuler vaniljeis, med krem og saus',
       allergies: '3, 7',
-      price: '100',
+      price: '105',
     },
     {
       title: 'Banansplitt',
       subtitle: '3 kuler vaniljeis med banan, krem, sjokoladesaus og strøssel',
       allergies: '1, 3, 7',
-      price: '120',
+      price: '125',
     },
     {
       title: 'Sjokoladefondant',
       subtitle: 'Sjokoladefondant med vaniljeis og melis',
       allergies: '1, 3, 7',
-      price: '110',
+      price: '115',
     },
     {
       title: 'Tinas Pavlova',
       subtitle: 'Hjemmelaget Pavlova med krem og bær',
       allergies: '3, 7',
-      price: '110',
+      price: '115',
     },
   ];
   drinks: Array<MenuItem> = [
     { title: 'Coca Cola', price: '45' },
-    { title: 'Coca Cola Zero', price: '45' },
+    { title: 'Coca Cola uten sukker', price: '45' },
     { title: 'Pepsi', price: '45' },
     { title: 'Pepsi Max', price: '45' },
-    { title: '7 UP', price: '45' },
+    { title: '7 Up Free', price: '45' },
     { title: 'Solo', price: '45' },
     { title: 'Eplemost', price: '45' },
     { title: 'Farris', price: '45' },
