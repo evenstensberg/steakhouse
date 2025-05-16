@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuItem, BeefSide } from '../environments/types';
+// @ts-ignore
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,40 @@ import { MenuItem, BeefSide } from '../environments/types';
 export class AppComponent {
   title = 'steakhouse';
   images = [];
+  ngOnInit() {
+    this.celebrate()
+  }
+  celebrate() {
+    var duration = 4 * 1000;
+    var end = Date.now() + duration;
+    var scalar = 3;
+    var flag = confetti.shapeFromText({ text: '🇳🇴', scalar });
+    (function frame() {
+      // launch a few confetti from the left edge
+      confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 105,
+        origin: { x: 0 },
+        shapes: [flag],
+        scalar
+      });
+      // and launch a few from the right edge
+      confetti({
+        particleCount: 7,
+        angle: 120,
+        spread: 155,
+        origin: { x: 1 },
+        shapes: [flag],
+        scalar
+      });
+
+      // keep going until we are out of time
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  }
   steakSauce: Array<BeefSide> = [
     {
       title: 'Husets peppersaus',
@@ -46,7 +82,7 @@ export class AppComponent {
     },
     {
       title: 'Ris',
-      allergies: 'Ingen'
+      allergies: 'Ingen',
     },
     {
       title: 'Fløtegratinerte poteter',
@@ -141,7 +177,7 @@ export class AppComponent {
     {
       title: 'Ekstra kjøtt',
       price: '65',
-    }
+    },
   ];
   potatos: Array<MenuItem> = [
     {
@@ -190,8 +226,7 @@ export class AppComponent {
     },
     {
       title: 'Chipotle chilli mayo',
-      subtitle:
-        'ost, chipotle chili mayo, salat, jalapeno.',
+      subtitle: 'ost, chipotle chili mayo, salat, jalapeno.',
       allergies: '1, 3, 9, 10',
       price: '185',
     },
@@ -203,7 +238,8 @@ export class AppComponent {
     },
     {
       title: 'BBQ burger',
-      subtitle: 'ost, hvitløksdressing, salat, løk, tomat, bbq bourbon og løkringer.',
+      subtitle:
+        'ost, hvitløksdressing, salat, løk, tomat, bbq bourbon og løkringer.',
       allergies: '1, 3, 7, 9, 10',
       price: '225',
     },
@@ -298,10 +334,11 @@ export class AppComponent {
     },
     {
       title: 'Vegetarfajitas',
-      subtitle: 'Grillede grønnsaker, serveres med frisk salat, revet ost, tortillalefser, rømme, guacamole, salsa, nachochips og ris.',
+      subtitle:
+        'Grillede grønnsaker, serveres med frisk salat, revet ost, tortillalefser, rømme, guacamole, salsa, nachochips og ris.',
       allergies: '1, 3, 7, 10',
-      price: '295'
-    }
+      price: '295',
+    },
   ];
   salads: Array<MenuItem> = [
     {
