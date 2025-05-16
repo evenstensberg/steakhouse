@@ -22,7 +22,7 @@ export class AppComponent {
     (function frame() {
       // launch a few confetti from the left edge
       confetti({
-        particleCount: 7,
+        particleCount: 1,
         angle: 60,
         spread: 105,
         origin: { x: 0 },
@@ -31,7 +31,7 @@ export class AppComponent {
       });
       // and launch a few from the right edge
       confetti({
-        particleCount: 7,
+        particleCount: 1,
         angle: 120,
         spread: 155,
         origin: { x: 1 },
