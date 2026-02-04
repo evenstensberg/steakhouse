@@ -5,21 +5,29 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './allergies-section.component.html',
   styleUrls: ['./allergies-section.component.scss'],
 })
+
 export class AllergiesSectionComponent implements OnInit {
   allergies = [
-    { name: 'Gluten' },
+    { name: 'Hvete' },
     { name: 'Skalldyr' },
     { name: 'Egg' },
+
     { name: 'Fisk' },
+
     { name: 'Peanøtt' },
+
     { name: 'Soya' },
+
     { name: 'Melk' },
-    { name: 'Nøtter' },
+
+    { name: 'Cashewnøtter' },
+
     { name: 'Selleri' },
+
     { name: 'Sennep' },
     { name: 'Sesam' },
     { name: 'Sulfitt' },
-    { name: 'Lupin' },
+    { name: 'Soyalecitin' },
     { name: 'Bløtdyr' },
   ];
   constructor() {}
