@@ -213,7 +213,7 @@ export class AppComponent {
   ];
   steaks: Array<MenuItem> = [
     { title: 'Indrefilet 200 gram', price: '415' },
-    { title: 'Entrecôte', price: 'kr. 1.9kr pr g' },
+    { title: 'Entrecôte', price: '1.9 pr gram' },
   ];
   kokkensSpesial: Array<MenuItem> = [
     {
