@@ -1,54 +1,70 @@
+/* Make the component full-bleed across the viewport */
+:host {
+  display: block;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
 .sub-title {
-  display: flex;
-  margin-left: 2em;
-  & img {
-    height: 60px;
-    width: auto;
-  }
-  & h4 {
-    position: relative;
-    top: 1em;
-  }
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 16px);
+  padding: 0 clamp(12px, 2vw, 24px);
 }
 
 .mobile-sub-header {
   display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 16px);
+  justify-self: center;
 }
 
-.sub-menu-title {
-  width: 100%;
-  max-width: 6em;
-  margin-left: 2em;
-  margin-right: 2em;
+.mobile-sub-header img {
+  height: clamp(40px, 6vw, 60px);
+  width: auto;
 }
+
+.mobile-sub-header .sub-menu-title {
+  font-size: clamp(1.125rem, 3vw, 1.75rem);
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+/* Decorative lines on both sides to visually center the title */
+.sub-title::before,
+.sub-title::after {
+  content: "";
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+  align-self: center;
+}
+.sub-title::before {
+  grid-column: 1;
+}
+.sub-title::after {
+  grid-column: 3;
+}
+
 .title-description {
-  position: relative;
-  top: 3em;
+  grid-column: 1 / -1;
   color: gray;
-  font-size: 0.9em;
+  font-size: 0.95em;
   font-style: italic;
+  margin: clamp(8px, 1.5vw, 16px) auto 0;
+  max-width: 1000px;
+  padding: 0 clamp(12px, 2vw, 24px);
+  text-align: center;
 }
+
 /* Phones :) */
 @media screen and (max-width: 990px) {
   .sub-title {
-    display: block;
-    margin-right: 1em;
+    gap: 8px;
   }
-  .mobile-sub-header {
-    display: flex;
-  }
-  .sub-menu-title {
-    font-size: 1em;
-    text-align: center;
-  }
-  .title-description {
-    color: gray;
-    font-size: 0.9em;
-    font-style: italic;
-    margin-left: 2em;
-
-    position: relative;
-    right: 1.5em;
-    text-align: center;
+  .mobile-sub-header img {
+    height: 40px;
   }
 }

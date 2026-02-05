@@ -1,16 +1,40 @@
+/* Default (desktop) layout: align items inline */
+.sub-menu-title {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 16px);
+  padding: 0 clamp(12px, 2vw, 24px);
+}
+
 img {
-  height: 60px;
+  height: clamp(40px, 6vw, 60px);
   width: auto;
 }
-span {
-  position: relative;
-  top: 0;
-  left: 1em;
+
+.add-sub-title {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Decorative line expanding to the right to use full width */
+.sub-menu-title::after {
+  content: "";
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+  grid-column: 3;
+  align-self: center;
 }
 
 /* Phones :) */
 @media screen and (max-width: 990px) {
-  .add-container {
-    margin-left: 1em;
+  .add-sub-title {
+    display: hidden;
+    width: 100%;
+  }
+  .add-sub-title > div {
+    text-align: center;
   }
 }
