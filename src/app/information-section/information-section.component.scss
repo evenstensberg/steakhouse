@@ -31,8 +31,11 @@
 @media screen and (max-width: 990px) {
   .email-container {
     text-align: center;
-
     display: flex;
+    flex-direction: row;
+    justify-content: center; /* center icon + text horizontally */
+    align-items: center; /* vertically align icon/text */
+    gap: 0.5rem; /* tidy spacing between icon and text */
     & span {
       font-size: 1rem;
       padding-left: 1em;
