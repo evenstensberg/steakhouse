@@ -11,48 +11,37 @@ interface SliderImages {
   selector: 'app-carosel',
   templateUrl: './carosel.component.html',
   styleUrls: ['./carosel.component.scss'],
+  standalone: false
 })
 export class CaroselComponent implements OnInit {
-  images: Array<SliderImages> = [
+  images: Array<any> = [
     {
-      url: '/assets/burger.jpeg',
-      alt: 'Burger',
-      title: 'Classic american burger',
-      caption: 'Dressing, salat og mye kjøtt',
+      url: '/assets/1.jpg',
+      alt: 'Burger'
     },
     {
-      url: '/assets/plankebiff.jpeg',
-      alt: 'Plankebiff',
-      title: 'Plankebiff',
-      caption: 'God biff, med potetmos og godt tilbehør',
+      url: '/assets/2.jpg',
+      alt: 'Dessert'
     },
     {
-      url: '/assets/pizza.jpeg',
-      alt: 'Pizza',
-      title: 'Pizza',
-      caption: 'Pizza med pepperoni, mais og løk',
+      url: '/assets/3.jpg',
+      alt: 'Middag'
     },
     {
-      url: '/assets/jarritos.jpeg',
-      alt: 'Jarritos brus',
-      caption: 'Jarritos',
-      title: 'Frisk brus',
+      url: '/assets/4.jpg',
+      alt: 'Biffsnadder'
+    },
+        {
+      url: '/assets/5.jpg',
+      alt: 'Snadder'
     },
     {
-      url: '/assets/dessert-1.jpeg',
-      alt: 'Dessert',
-      caption: '3 kuler vaniljeis, med krem og saus',
-      title: 'Dessert',
-    },
-    {
-      url: '/assets/creme.jpeg',
-      alt: 'Dessert',
-      caption: 'Karamelisert fløte',
-      title: 'Creme Brulee',
+      url: '/assets/6.jpeg',
+      alt: 'Jarritos brus'
     },
   ];
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

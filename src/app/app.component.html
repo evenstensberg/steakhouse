@@ -4,6 +4,9 @@
     <app-navbar></app-navbar>
     <app-carosel></app-carosel>
   </div>
+  <div class="message">
+    <p-message>Onsdag 29/04 lanserer vi en helt ny <a href="#lunsj">lunsjmeny</a>. Velkommen innom for en smakfull og hyggelig pause! ☀️</p-message>
+  </div>
   <!-- Logo aligned left or centre of caorsel -->
   <!-- Menu and description -->
   <main class="main-page-container">
@@ -20,7 +23,8 @@
       <app-allergies-section></app-allergies-section>
 
       <!-- lunch -->
-      <app-menu-title menuTitle="Lunsj" imageUrl="/assets/lunch.png" description="Vår flotte lunsj serveres fra 1100-1500 og kan enten spises inne eller som takeaway. Kaffe er inkludert!"
+      <app-menu-title menuTitle="Lunsj" imageUrl="/assets/lunch.png"
+        description="Vår flotte lunsj serveres fra 1100-1500 og kan enten spises inne eller som takeaway. Kaffe er inkludert!"
         idTag="lunsj"></app-menu-title>
       <app-menu-item-with-description [arr]="lunch"></app-menu-item-with-description>
       <!-- små/forretter -->

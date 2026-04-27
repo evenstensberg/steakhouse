@@ -1,22 +1,25 @@
-<ngb-carousel
-  class="slider"
-  *ngIf="images.length"
-  [interval]="5000"
-  [pauseOnHover]="true"
-  [pauseOnFocus]="true"
-  [wrap]="true"
-  [keyboard]="true"
-  [showNavigationArrows]="true"
-  [showNavigationIndicators]="true"
->
-  <ng-template *ngFor="let img of images; index as i" ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img
-        [src]="img.url"
-        [alt]="img.alt"
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
-  </ng-template>
-</ngb-carousel>
+@if (images.length) {
+  <ngb-carousel
+    class="slider"
+    [interval]="5000"
+    [pauseOnHover]="true"
+    [pauseOnFocus]="true"
+    [wrap]="true"
+    [keyboard]="true"
+    [showNavigationArrows]="true"
+    [showNavigationIndicators]="true"
+    >
+    @for (img of images; track img; let i = $index) {
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img
+            [src]="img.url"
+            [alt]="img.alt"
+            loading="lazy"
+            decoding="async"
+            />
+        </div>
+      </ng-template>
+    }
+  </ngb-carousel>
+}
