@@ -18,175 +18,101 @@
     <div class="main-menu">
       <!-- List of allergies -->
       <app-allergies-section></app-allergies-section>
+
+      <!-- lunch -->
+      <app-menu-title menuTitle="Lunsj" imageUrl="/assets/lunch.png" description="Vår flotte lunsj serveres fra 1100-1500 og kan enten spises inne eller som takeaway. Kaffe er inkludert!"
+        idTag="lunsj"></app-menu-title>
+      <app-menu-item-with-description [arr]="lunch"></app-menu-item-with-description>
       <!-- små/forretter -->
-      <app-menu-title
-        menuTitle="Småretter/Forretter"
-        imageUrl="/assets/starters.png"
-        idTag="smaaretter"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Småretter/Forretter" imageUrl="/assets/starters.png"
+        idTag="smaaretter"></app-menu-title>
       <!-- List of starters -->
-      <app-menu-item-with-description
-        [arr]="starters"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="starters"></app-menu-item-with-description>
       <!--  burgere -->
-      <app-menu-title
-        menuTitle="Hjemmelagde burgere"
-        imageUrl="/assets/burger.png"
+      <app-menu-title menuTitle="Hjemmelagde burgere" imageUrl="/assets/burger.png"
         description="Doble smashburgere a 80g stk- Alle varianter serveres i briochebrød og pommes bistro."
-        idTag="burgere"
-      ></app-menu-title>
+        idTag="burgere"></app-menu-title>
 
       <!-- List of burgers -->
-      <app-menu-item-with-description
-        [arr]="burgers"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="burgers"></app-menu-item-with-description>
 
       <!-- Burger sides start -->
       <div class="add-title">
-        <app-sub-menu-title
-          title="Tillegg til burger"
-          imageUrl="/assets/snack.png"
-        ></app-sub-menu-title>
+        <app-sub-menu-title title="Tillegg til burger" imageUrl="/assets/snack.png"></app-sub-menu-title>
         <!-- Each side order for burger -->
         <app-sub-menu-list [arr]="burgerSideOrders"></app-sub-menu-list>
       </div>
       <!-- biff -->
-      <app-menu-title
-        menuTitle="Biff meny"
-        imageUrl="/assets/meat.png"
+      <app-menu-title menuTitle="Biff meny" imageUrl="/assets/meat.png"
         description="Prisene inkluderer valgfri potet, valgfri saus, salat - (3,10) eller grønnsaker. Vil du ha større biff? Spør betjening"
-        idTag="biff"
-      ></app-menu-title>
+        idTag="biff"></app-menu-title>
       <!-- List of biff -->
       <app-menu-item-simple [arr]="steaks"></app-menu-item-simple>
       <!-- Extras for biff -->
-      <app-steak-extras
-        [sauces]="steakSauce"
-        [sides]="steakSides"
-      ></app-steak-extras>
+      <app-steak-extras [sauces]="steakSauce" [sides]="steakSides"></app-steak-extras>
       <!--  spesial biff -->
-      <app-menu-title
-        menuTitle="Kokkens spesialbiffer"
-        imageUrl="/assets/meat.png"
-        description="Lages av norsk indrefilet av okse, 200 gram."
-        idTag="spesialbiff"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Kokkens spesialbiffer" imageUrl="/assets/meat.png"
+        description="Lages av norsk indrefilet av okse, 200 gram." idTag="spesialbiff"></app-menu-title>
 
       <!-- List of spesial -->
-      <app-menu-item-with-description
-        [arr]="kokkensSpesial"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="kokkensSpesial"></app-menu-item-with-description>
       <!-- Burger sides start -->
       <div class="add-title">
-        <app-sub-menu-title
-          title="Tillegg til biff"
-          imageUrl="/assets/snack.png"
-        ></app-sub-menu-title>
+        <app-sub-menu-title title="Tillegg til biff" imageUrl="/assets/snack.png"></app-sub-menu-title>
         <!-- Each side order in general -->
         <app-sub-menu-list [arr]="burgerSideOrders"></app-sub-menu-list>
       </div>
       <!-- Andre grillretter -->
-      <app-menu-title
-        menuTitle="Andre grillretter"
-        imageUrl="/assets/grill.png"
-        idTag="grillretter"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Andre grillretter" imageUrl="/assets/grill.png" idTag="grillretter"></app-menu-title>
       <!-- List of grillretter -->
-      <app-menu-item-with-description
-        [arr]="otherGrillDishes"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="otherGrillDishes"></app-menu-item-with-description>
 
       <!-- Bakt potet start -->
-      <app-menu-title
-        menuTitle="Bakt potet"
-        imageUrl="/assets/baked.png"
-        idTag="potet"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Bakt potet" imageUrl="/assets/baked.png" idTag="potet"></app-menu-title>
       <!-- List of poteter -->
       <app-menu-item-simple [arr]="potatos"></app-menu-item-simple>
 
       <!-- salater -->
-      <app-menu-title
-        menuTitle="Salater"
-        imageUrl="/assets/salad.png"
-        description="Serveres med brød og smør"
-        idTag="salater"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Salater" imageUrl="/assets/salad.png" description="Serveres med brød og smør"
+        idTag="salater"></app-menu-title>
 
       <!-- List of salads -->
-      <app-menu-item-with-description
-        [arr]="salads"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="salads"></app-menu-item-with-description>
 
       <!-- pasta -->
-      <app-menu-title
-        menuTitle="Pasta"
-        imageUrl="/assets/pasta.png"
-        description="Serveres med brød og smør"
-        idTag="pasta"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Pasta" imageUrl="/assets/pasta.png" description="Serveres med brød og smør"
+        idTag="pasta"></app-menu-title>
       <!-- List of pasta -->
-      <app-menu-item-with-description
-        [arr]="pastas"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="pastas"></app-menu-item-with-description>
       <!-- fish -->
-      <app-menu-title
-        menuTitle="Fisk"
-        imageUrl="/assets/fish.png"
-        idTag="fisk"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Fisk" imageUrl="/assets/fish.png" idTag="fisk"></app-menu-title>
       <!-- List of fish -->
-      <app-menu-item-with-description
-        [arr]="fishes"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="fishes"></app-menu-item-with-description>
       <!--  pizza -->
-      <app-menu-title
-        menuTitle="Pizza"
-        imageUrl="/assets/pizza.png"
+      <app-menu-title menuTitle="Pizza" imageUrl="/assets/pizza.png"
         description="Vi serverer amerikansk pizza stekt i panne. (Allergener - 1, 7) Medium = 30cm kr 145,- Stor = 40 cm kr 245,-"
-        idTag="pizza"
-      ></app-menu-title>
+        idTag="pizza"></app-menu-title>
 
       <!-- List of pizzas -->
-      <app-menu-item-with-description
-        [arr]="pizzas"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="pizzas"></app-menu-item-with-description>
 
       <!-- Pizza sides -->
       <div class="add-title">
-        <app-sub-menu-title
-          title="Ekstra"
-          imageUrl="/assets/pizzaSauce.png"
-        ></app-sub-menu-title>
+        <app-sub-menu-title title="Ekstra" imageUrl="/assets/pizzaSauce.png"></app-sub-menu-title>
         <!-- Each extra item for pizza -->
         <app-sub-menu-list [arr]="pizzaExtras"></app-sub-menu-list>
       </div>
       <!-- children -->
-      <app-menu-title
-        menuTitle="Barnemeny"
-        imageUrl="/assets/children.png"
-        idTag="barn"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Barnemeny" imageUrl="/assets/children.png" idTag="barn"></app-menu-title>
       <!-- List of children -->
-      <app-menu-item-with-description
-        [arr]="children"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="children"></app-menu-item-with-description>
       <!-- Menu item title dessert -->
-      <app-menu-title
-        menuTitle="Dessert"
-        imageUrl="/assets/dessert.png"
-        idTag="dessert"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Dessert" imageUrl="/assets/dessert.png" idTag="dessert"></app-menu-title>
       <!-- List of desserts -->
-      <app-menu-item-with-description
-        [arr]="desserts"
-      ></app-menu-item-with-description>
+      <app-menu-item-with-description [arr]="desserts"></app-menu-item-with-description>
       <!-- Drinks start -->
-      <app-menu-title
-        menuTitle="Brus/mineralvann(0,33L flaske)"
-        imageUrl="/assets/softDrink.png"
-        idTag="drikke"
-      ></app-menu-title>
+      <app-menu-title menuTitle="Brus/mineralvann(0,33L flaske)" imageUrl="/assets/softDrink.png"
+        idTag="drikke"></app-menu-title>
       <!-- List of drinks -->
       <app-menu-item-simple [arr]="drinks"></app-menu-item-simple>
     </div>
@@ -195,9 +121,9 @@
       <div>
         <p>Mandag - Stengt</p>
         <p>Tirsdag - Stengt</p>
-        <p>Onsdag 15:00 - 22:00</p>
-        <p>Torsdag 15:00 - 22:00</p>
-        <p>Fredag 15:00 - 23:00</p>
+        <p>Onsdag 11:00 - 22:00</p>
+        <p>Torsdag 11:00 - 22:00</p>
+        <p>Fredag 11:00 - 23:00</p>
         <p>Lørdag 15:00 - 23:00</p>
         <p>Søndag 15:00 - 22:00</p>
       </div>

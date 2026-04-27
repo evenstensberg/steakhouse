@@ -9,6 +9,96 @@ import { MenuItem, BeefSide } from '../environments/types';
 export class AppComponent {
   title = 'steakhouse';
   images = [];
+  lunch: Array<any> = [
+    // ferdig
+    {
+      title: 'Crispy chicken salat',
+      subtitle: 'Frisk salat med crispy chicken, paprika, løk, mais, agurk, mango curry dressing, brød og smør.',
+      allergies: '1, 3, 7, 10',
+      price: '185',
+    },
+    // 
+    {
+      title: 'Cæsarsalat',
+      subtitle: 'Romanosalat, bacon, kyllingfilet, agurk, rødløk, cæsardressing, parmesan, krutonger, brød og smør.',
+      allergies: '1, 3, 4, 7, 10 + bygg',
+      price: '185',
+    },
+    //
+    {
+      title: 'Biffsalat',
+      subtitle: 'Frisk salat med biff, mais, agurk, tomat, løk, paprika, hvitløksdressing, brød og smør.',
+      allergies: '1, 3, 7, 9, 10',
+      price: '185',
+    },
+    //
+    {
+      title: 'Barbequeburger',
+      subtitle: 'Ost, hvitløksdressing, salat, løk, tomat, bbq bourbon, løkringer og pommets frites.',
+      allergies: '1, 3, 7, 9, 10',
+      price: '235',
+    },
+    //
+    {
+      title: 'Bacon cheeseburger',
+      subtitle: 'Ost, dressing, salat, løk, tomat, bacon og pommes frites.',
+      allergies: '1, 3, 7, 10',
+      price: '210',
+    },
+    //
+    {
+      title: 'Crispy chicken wrap',
+      subtitle: 'Crispy chicken, salat, løk, paprika, agurk, mango curry dressing, pommes frites og aioli.',
+      allergies: '1, 3, 7, 10',
+      price: '195',
+    },
+    //
+    {
+      title: 'Beef wrap',
+      subtitle: 'Strimlet indrefilet av storfe, salat, løk, paprika, agurk, hvitløksdressing, barbequesaus, pommes frites og aioli.',
+      allergies: '1, 3, 7, 9, 10',
+      price: '205',
+    },
+    //
+    {
+      title: 'Lunsjbrød med crispy chicken',
+      subtitle: 'Crispy chicken, salat, løk, paprika, agurk, mango curry dressing og pommes frites.',
+      allergies: '1, 3, 10',
+      price: '195',
+    },
+    //
+    {
+      title: 'Lunsjbrød med indrefilet',
+      subtitle: 'Strimlet indrefilet av storfe, salat, løk, paprika, agurk, hvitløksdressing, barbequesaus og pommes frites.',
+      allergies: '1, 3, 7, 9, 10',
+      price: '205',
+    },
+
+    {
+      title: 'Dirty fries med bacon',
+      subtitle: 'Ostegratinert pommes frites med bacon, løk, jalapenos, hvitløksdressing og barbequesaus.',
+      allergies: '1, 3, 7, 9, 10',
+      price: '170',
+    },
+    {
+      title: 'Dirty fries med kylling',
+      subtitle: 'Ostegratinert pommes frites med kylling, løk, jalapenos, hvitløksdressing og barbequesaus.',
+      allergies: '1, 3, 7, 9, 10',
+      price: '170',
+    },
+    {
+      title: 'Omelett med ost og skinke',
+      subtitle: 'Sjampinjonger, løk og paprika. Serveres med salat, dressing, brød og smør.',
+      allergies: '1, 3, 7, 10',
+      price: '185',
+    },
+    {
+      title: 'Omelett med ost og kylling',
+      subtitle: 'Sjampinjonger, løk og paprika. Serveres med salat, dressing, brød og smør.',
+      allergies: '1, 3, 7, 10',
+      price: '185',
+    },
+  ]
   steakSauce: Array<BeefSide> = [
     {
       title: 'Husets peppersaus',
@@ -79,11 +169,11 @@ export class AppComponent {
       title: 'Ektra poteter',
       price: '50',
     },
-        {
+    {
       title: 'Ekstra bacon',
       price: '25',
     },
-      {
+    {
       title: 'Ekstra ost',
       price: '20',
       allergies: '7',
@@ -125,7 +215,7 @@ export class AppComponent {
       title: 'Ekstra kjøtt (vanlig)',
       price: '70',
     },
-        {
+    {
       title: 'Ekstra kjøtt (200gram)',
       price: '300',
     },
@@ -504,7 +594,7 @@ export class AppComponent {
       allergies: '1, 7',
       price: '145',
     },
-      {
+    {
       title: 'Hjemmelaget peanutcake',
       subtitle: 'Serveres med vaniljeis, krem, kjeks (1,3,7,13) og karamellsaus.',
       allergies: '1, 3, 5, 7 + bygg',
