@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "steakhouse:build:production"
+              "buildTarget": "steakhouse:build:production"
             },
             "development": {
-              "browserTarget": "steakhouse:build:development"
+              "buildTarget": "steakhouse:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "steakhouse:build"
+            "buildTarget": "steakhouse:build"
           }
         },
         "test": {
