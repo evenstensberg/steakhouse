@@ -19,11 +19,20 @@ import { SteakExtrasComponent } from './steak-extras/steak-extras.component';
 import { ScrollUpSectionComponent } from './scroll-up-section/scroll-up-section.component';
 import { PromotionSectionComponent } from './promotion-section/promotion-section.component';
 import { StickyScrollComponent } from './sticky-scroll/sticky-scroll.component';
+import { MessageModule } from 'primeng/message';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeuix/themes/aura';
 
 @NgModule({
   declarations: [AppComponent, CaroselComponent, NavbarComponent, LogoNavbarComponent, InformationSectionComponent, MenuShortcutsComponent, AllergiesSectionComponent, MenuTitleComponent, MenuItemWithDescriptionComponent, MenuItemSimpleComponent, SubMenuTitleComponent, SubMenuListComponent, SteakExtrasComponent, ScrollUpSectionComponent, PromotionSectionComponent, StickyScrollComponent],
-  imports: [BrowserModule, NgbModule, FontAwesomeModule],
-  providers: [],
+  imports: [BrowserModule, NgbModule, FontAwesomeModule, MessageModule],
+  providers: [
+    providePrimeNG({
+            theme: {
+                preset: Aura
+            }
+        })
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

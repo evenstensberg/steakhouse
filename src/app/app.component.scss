@@ -123,3 +123,18 @@ app-promotion-section {
 .mobile-sub-header {
   display: flex;
 }
+
+.message {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.message > * {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 999999999;
+}
