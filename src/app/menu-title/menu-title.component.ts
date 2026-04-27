@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-menu-title',
-  templateUrl: './menu-title.component.html',
-  styleUrls: ['./menu-title.component.scss'],
+    selector: 'app-menu-title',
+    templateUrl: './menu-title.component.html',
+    styleUrls: ['./menu-title.component.scss'],
+    standalone: false
 })
 export class MenuTitleComponent implements OnInit {
   @Input() menuTitle: string = '';

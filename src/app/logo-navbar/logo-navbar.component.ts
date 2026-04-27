@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-logo-navbar',
-  templateUrl: './logo-navbar.component.html',
-  styleUrls: ['./logo-navbar.component.scss']
+    selector: 'app-logo-navbar',
+    templateUrl: './logo-navbar.component.html',
+    styleUrls: ['./logo-navbar.component.scss'],
+    standalone: false
 })
 export class LogoNavbarComponent implements OnInit {
 
