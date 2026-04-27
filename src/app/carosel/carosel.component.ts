@@ -8,9 +8,10 @@ interface SliderImages {
 }
 
 @Component({
-  selector: 'app-carosel',
-  templateUrl: './carosel.component.html',
-  styleUrls: ['./carosel.component.scss'],
+    selector: 'app-carosel',
+    templateUrl: './carosel.component.html',
+    styleUrls: ['./carosel.component.scss'],
+    standalone: false
 })
 export class CaroselComponent implements OnInit {
   images: Array<SliderImages> = [

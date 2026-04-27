@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-scroll-up-section',
-  templateUrl: './scroll-up-section.component.html',
-  styleUrls: ['./scroll-up-section.component.scss'],
+    selector: 'app-scroll-up-section',
+    templateUrl: './scroll-up-section.component.html',
+    styleUrls: ['./scroll-up-section.component.scss'],
+    standalone: false
 })
 export class ScrollUpSectionComponent implements OnInit {
   scrollToTop() {

@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sub-menu-title',
-  templateUrl: './sub-menu-title.component.html',
-  styleUrls: ['./sub-menu-title.component.scss'],
+    selector: 'app-sub-menu-title',
+    templateUrl: './sub-menu-title.component.html',
+    styleUrls: ['./sub-menu-title.component.scss'],
+    standalone: false
 })
 export class SubMenuTitleComponent implements OnInit {
   @Input() title: string = '';

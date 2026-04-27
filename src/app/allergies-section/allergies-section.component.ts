@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-allergies-section',
-  templateUrl: './allergies-section.component.html',
-  styleUrls: ['./allergies-section.component.scss'],
+    selector: 'app-allergies-section',
+    templateUrl: './allergies-section.component.html',
+    styleUrls: ['./allergies-section.component.scss'],
+    standalone: false
 })
 
 export class AllergiesSectionComponent implements OnInit {

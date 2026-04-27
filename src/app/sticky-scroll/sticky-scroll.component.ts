@@ -1,9 +1,10 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 @Component({
-  selector: 'app-sticky-scroll',
-  templateUrl: './sticky-scroll.component.html',
-  styleUrls: ['./sticky-scroll.component.scss'],
+    selector: 'app-sticky-scroll',
+    templateUrl: './sticky-scroll.component.html',
+    styleUrls: ['./sticky-scroll.component.scss'],
+    standalone: false
 })
 export class StickyScrollComponent implements OnInit {
   windowScrolled: boolean = false;
